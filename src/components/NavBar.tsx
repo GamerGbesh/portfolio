@@ -40,15 +40,15 @@ const NavBar = () => {
                 >
                     Skills
                 </Link>
-                <Link
-                    to="achievements"
-                    smooth={true}
-                    duration={500}
-                    offset={-30}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    Achievements
-                </Link>
+                {/*<Link*/}
+                {/*    to="achievements"*/}
+                {/*    smooth={true}*/}
+                {/*    duration={500}*/}
+                {/*    offset={-30}*/}
+                {/*    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"*/}
+                {/*>*/}
+                {/*    Achievements*/}
+                {/*</Link>*/}
                 <Link
                     to="projects"
                     smooth={true}

@@ -2,6 +2,7 @@ import NavBar from "../components/NavBar.tsx";
 import Home from "../components/Home.tsx";
 import About from "../components/About.tsx";
 import Languages from "../components/Languages.tsx";
+import Contact from "../components/Contact.tsx";
 
 export default function MainPage() {
     return (
@@ -11,6 +12,7 @@ export default function MainPage() {
                 <Home/>
                 <About/>
                 <Languages/>
+                <Contact/>
             </div>
         </>
     );
