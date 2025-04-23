@@ -7,13 +7,13 @@ export default function Achievements() {
             title: "1st Place – School-Level Coding Competition",
             category: "Code Competition",
             link: "https://www.linkedin.com/posts/philemon-mensah-b7124030b_coding-competition-smallwins-activity-7297393173251710976-rH0f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7hEoUBrDKDMhdfEfM6gkkzwnD_R0N2x9s",
-            image: "src/assets/achievements/competition.jpg",
+            image: "/assets/achievements/competition.jpg",
         },
         {
             title: "Participated in Zindi & Yango Hackathon to Tackle Real-World Tech Challenges",
             category: "Hackathon Participation",
             link: "https://www.linkedin.com/posts/philemon-mensah-b7124030b_hackathonexperience-zindi-yango-activity-7277305555998638080-pLq8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7hEoUBrDKDMhdfEfM6gkkzwnD_R0N2x9s",
-            image: "src/assets/achievements/hackathon.jpg",
+            image: "/assets/achievements/hackathon.jpg",
         }
 
     ]

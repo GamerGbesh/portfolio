@@ -7,19 +7,19 @@ export default function Skills() {
             name: "Backend Development",
             description: "Built RESTful APIs using Django, with a focus on scalability, " +
                 "database design, and integration with React frontends.",
-            image: "src/assets/skills/django.png",
+            image: "/assets/skills/django.png",
         },
         {
             name: "Frontend Development",
             description: "Developed interactive UIs using React with JavaScript and TypeScript, " +
                 "implementing responsive layouts and reusable components.",
-            image: "src/assets/skills/react.svg",
+            image: "/assets/skills/react.svg",
         },
         {
             name: "Machine Learning",
             description: "Applied foundational machine learning techniques using Python, including data preprocessing, " +
                 "model training, and evaluation.",
-            image: "src/assets/skills/ml.jpg",
+            image: "/assets/skills/ml.jpg",
         },
 
     ];

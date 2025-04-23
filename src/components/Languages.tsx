@@ -1,11 +1,11 @@
 export default function Languages() {
     const languages = [
-        { src: "src/assets/languages/python-programming-language.webp", alt: "Python" },
-        { src: "src/assets/languages/js.png", alt: "JavaScript" },
-        { src: "src/assets/languages/ts.png", alt: "TypeScript" },
-        { src: "src/assets/languages/css.png", alt: "CSS" },
-        { src: "src/assets/languages/sql.png", alt: "SQL" },
-        { src: "src/assets/languages/html.png", alt: "HTML" },
+        { src: "/assets/languages/python-programming-language.webp", alt: "Python" },
+        { src: "/assets/languages/js.png", alt: "JavaScript" },
+        { src: "/assets/languages/ts.png", alt: "TypeScript" },
+        { src: "/assets/languages/css.png", alt: "CSS" },
+        { src: "/assets/languages/sql.png", alt: "SQL" },
+        { src: "/assets/languages/html.png", alt: "HTML" },
     ];
 
     return (

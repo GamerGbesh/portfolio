@@ -30,21 +30,21 @@ export default function Contact() {
 
                 <div className="flex space-x-6">
                     <a href="https://www.linkedin.com/in/philemon-mensah-b7124030b" target="_blank" rel="noopener noreferrer">
-                        <img src="src/assets/social/linkedin.png"
+                        <img src="/assets/social/linkedin.png"
                              alt="LinkedIn"
                              className="w-8 h-8 hover:scale-110 transition rounded-full" />
                     </a>
                     <a href="https://github.com/GamerGbesh" target="_blank" rel="noopener noreferrer">
-                        <img src="src/assets/social/github.png"
+                        <img src="/assets/social/github.png"
                              alt="GitHub"
                              className="w-8 h-8 hover:scale-110 transition rounded-full" />
                     </a>
                     <a href="https://www.snapchat.com/add/gbeshko?share_id=8SPs9zxLbG8&locale=en-EN" target="_blank" rel="noopener noreferrer">
-                        <img src="src/assets/social/snapchat.png"
+                        <img src="/assets/social/snapchat.png"
                              alt="Snapchat"
                              className="w-8 h-8 hover:scale-110 transition rounded-full" />
                     </a>
-                    <img src="src/assets/social/WhatsApp.svg.webp"
+                    <img src="/assets/social/WhatsApp.svg.webp"
                          alt="Whatsapp"
                          className="w-8 h-8 hover:scale-110 transition"
                     onClick={() => {
