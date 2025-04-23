@@ -1,7 +1,7 @@
 import { Element } from "react-scroll"
 
 export default function Contact() {
-    const phone = "+233 20 240 9844"
+    const phone = "+233 55 920 3950"
     const email = "peymensah@gmail.com"
 
     return (
