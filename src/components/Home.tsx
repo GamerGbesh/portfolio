@@ -31,7 +31,7 @@ function Home() {
                         building the future, one line of code at a time.
                     </p>
                     <button className="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg transition-all">
-                        <a href="src/docs/Mensah Philemon's CV.pdf" download title={"Philemon's CV"}>Download CV</a>
+                        <a href="/docs/Mensah Philemon's CV.pdf" download title={"Philemon's CV"}>Download CV</a>
                     </button>
                 </div>
             </div>
