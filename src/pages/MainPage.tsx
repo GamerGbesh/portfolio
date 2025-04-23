@@ -3,6 +3,8 @@ import Home from "../components/Home.tsx";
 import About from "../components/About.tsx";
 import Languages from "../components/Languages.tsx";
 import Contact from "../components/Contact.tsx";
+import ScrollButton from "../components/ScrollButton.tsx";
+import Skills from "../components/Skills.tsx";
 
 export default function MainPage() {
     return (
@@ -12,7 +14,9 @@ export default function MainPage() {
                 <Home/>
                 <About/>
                 <Languages/>
+                <Skills/>
                 <Contact/>
+                <ScrollButton/>
             </div>
         </>
     );

@@ -35,7 +35,7 @@ const NavBar = () => {
                     to="skills"
                     smooth={true}
                     duration={500}
-                    offset={-30}
+                    offset={-60}
                     className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
                 >
                     Skills
