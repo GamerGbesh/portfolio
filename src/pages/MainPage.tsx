@@ -5,6 +5,8 @@ import Languages from "../components/Languages.tsx";
 import Contact from "../components/Contact.tsx";
 import ScrollButton from "../components/ScrollButton.tsx";
 import Skills from "../components/Skills.tsx";
+import Projects from "../components/Projects.tsx";
+import Achievements from "../components/Achievements.tsx";
 
 export default function MainPage() {
     return (
@@ -15,6 +17,8 @@ export default function MainPage() {
                 <About/>
                 <Languages/>
                 <Skills/>
+                <Achievements/>
+                <Projects/>
                 <Contact/>
                 <ScrollButton/>
             </div>

@@ -9,7 +9,7 @@ export default function ScrollButton() {
             offset={-30}
             className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
         >
-            <button className={"bg-red-500 rounded-xl fixed right-8 bottom-8 w-12 h-12 text-2xl font-bold hover:bg-red-400"}>
+            <button className={"bg-red-500 rounded-xl fixed right-8 bottom-8 w-10 h-10 text-2xl hover:bg-red-400"}>
                 ↑
             </button>
         </Link>

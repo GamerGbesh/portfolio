@@ -3,12 +3,12 @@ import {Element, Link} from "react-scroll";
 export default function About() {
     return (
         <Element name="about">
-            <div className="h-screen snap-start flex flex-col md:flex-row items-center justify-start px-6 md:px-0 ">
+            <div className="min-h-screen snap-start flex flex-col md:flex-row items-center justify-start px-6 md:px-0 ">
                 <div className="pr-0 md:pr-30 w-8/12">
-                    <img src="src/assets/ELMA0835.jpg" alt="Philemon" className="rounded-xl shadow-lg"/>
+                    <img src="src/assets/Me.jpg" alt="Philemon" className="rounded-xl shadow-lg"/>
                 </div>
                 <div className="mt-6 md:mt-0 text-white space-y-4 max-w-xl">
-                    <p className="text-2xl font-bold underline underline-offset-4">About Me</p>
+                    <p className="text-2xl font-bold  underline-offset-4">About Me</p>
 
                     <p className="text-lg">
                         Hey there! I'm <span className="font-semibold text-blue-300">Philemon Mensah</span>, a sophomore at the University of Ghana

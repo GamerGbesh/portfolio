@@ -7,25 +7,26 @@ export default function Skills() {
             name: "Backend Development",
             description: "Built RESTful APIs using Django, with a focus on scalability, " +
                 "database design, and integration with React frontends.",
-            image: "src/assets/django.png",
+            image: "src/assets/skills/django.png",
         },
         {
             name: "Frontend Development",
             description: "Developed interactive UIs using React with JavaScript and TypeScript, " +
                 "implementing responsive layouts and reusable components.",
-            image: "src/assets/react.svg",
+            image: "src/assets/skills/react.svg",
         },
         {
             name: "Machine Learning",
             description: "Applied foundational machine learning techniques using Python, including data preprocessing, " +
                 "model training, and evaluation.",
-            image: "src/assets/ml.jpg",
+            image: "src/assets/skills/ml.jpg",
         },
+
     ];
 
     return (
         <Element name={"skills"}>
-            <div className="h-screen snap-start">
+            <div className="min-h-screen snap-start">
                 <p className={"text-4xl italic pb-10 font-bold"}>My Skills</p>
                 <div className="flex flex-col gap-5">
                     {skills.map(({ name, description, image }) => (

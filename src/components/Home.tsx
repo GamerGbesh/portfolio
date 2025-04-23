@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 function Home() {
     return (
         <Element name="home">
-            <div className="h-screen snap-start flex items-center justify-center text-white home">
+            <div className="min-h-screen snap-start flex items-center justify-center text-white home">
 
                 <div className="absolute inset-0 z-0 animate-bgSymbols pointer-events-none">
                     {[...Array(25)].map((_, i) => (
