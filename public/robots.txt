@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://https://portfolio-delta-amber-47.vercel.app/sitemap.xml
