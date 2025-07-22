@@ -21,6 +21,7 @@ export default function MainPage() {
                 <Projects/>
                 <Contact/>
                 <ScrollButton/>
+                <script src="//code.tidio.co/3hasrvib0rykjxxf4h07wvurh6y7wguc.js" async></script>
             </div>
         </>
     );
