@@ -1,75 +1,42 @@
 import { Link } from "react-scroll";
 
+const navLinks = [
+  { to: "home", label: "Home", offset: -30 },
+  { to: "about", label: "About Me", offset: -30 },
+  { to: "skills", label: "Skills", offset: -60 },
+  { to: "achievements", label: "Achievements", offset: -30 },
+  { to: "projects", label: "Projects", offset: 10 },
+  { to: "contact", label: "Contact", offset: -30 },
+];
+
 const NavBar = () => {
-    return (
-        <div className="hidden sm:flex justify-center w-full fixed top-0 left-0  backdrop-blur-md text-white py-4 z-50 shadow-md">
-            <nav className="flex items-center gap-8 text-sm sm:text-base font-medium">
-                <Link
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    offset={-30}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    Home
-                </Link>
-                <Link
-                    to="about"
-                    smooth={true}
-                    duration={500}
-                    offset={-30}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    About Me
-                </Link>
-                {/*<Link*/}
-                {/*    to="experience"*/}
-                {/*    smooth={true}*/}
-                {/*    duration={500}*/}
-                {/*    offset={-30}*/}
-                {/*    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"*/}
-                {/*>*/}
-                {/*    Experience*/}
-                {/*</Link>*/}
-                <Link
-                    to="skills"
-                    smooth={true}
-                    duration={500}
-                    offset={-60}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    Skills
-                </Link>
-                <Link
-                    to="achievements"
-                    smooth={true}
-                    duration={500}
-                    offset={-30}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    Achievements
-                </Link>
-                <Link
-                    to="projects"
-                    smooth={true}
-                    duration={500}
-                    offset={10}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    Projects
-                </Link>
-                <Link
-                    to="contact"
-                    smooth={true}
-                    duration={500}
-                    offset={-30}
-                    className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                >
-                    Contact
-                </Link>
-            </nav>
+  return (
+    <div className="hidden sm:flex justify-center w-full fixed top-0 left-0 z-50">
+      <div className="flex items-center w-full max-w-5xl mx-auto px-6 py-3 mt-3 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
+        {/* Logo/Initials */}
+        <div className="mr-8 font-bold text-lg tracking-widest text-blue-400 drop-shadow-lg select-none">
+          PM
         </div>
-    );
+        {/* Nav Links */}
+        <nav className="flex items-center gap-8 text-sm sm:text-base font-medium w-full">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              smooth={true}
+              duration={500}
+              offset={link.offset}
+              spy={true}
+              activeClass="text-blue-400 border-b-2 border-blue-400"
+              className="cursor-pointer hover:text-blue-400 transition-all duration-300 px-1 pb-0.5 border-b-2 border-transparent"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </div>
+  );
 };
 
 export default NavBar;

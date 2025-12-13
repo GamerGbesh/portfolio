@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+# Backend Engineer & AI Systems Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Philemon Mensah** | Computer Engineering Student | AI Intern @ Remotown
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my professional portfolio showcasing my expertise in **backend engineering**, **AI/ML systems**, and **data pipelines**. Built with React + TypeScript + Vite for deployment simplicity, but the focus is entirely on backend and AI work.
 
-## Expanding the ESLint configuration
+## What I Do
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Backend Engineering**: Production APIs with Django/FastAPI, PostgreSQL optimization, system architecture
+- **AI/ML Systems**: RAG pipelines, transformer models, vector databases (Qdrant, pgvector, Chroma)
+- **Data Engineering**: Large-scale data normalization, entity canonicalization, ETL workflows
+- **DevOps**: Docker containerization, CI/CD with GitHub Actions, comprehensive testing
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Featured Projects
+
+### 1. Company Name Canonicalization (Flagship AI Project)
+
+- **Problem**: Duplicate company entities in noisy datasets
+- **Solution**: RAG pipeline with pretrained + fine-tuned transformers and vector search
+- **Tech**: Python, Transformers, Qdrant, pgvector, Chroma
+- **Repo**: [company_name_model_usage](https://github.com/GamerGbesh/company_name_model_usage.git)
+
+### 2. Remotown Production Data Pipelines
+
+- Designed job & company canonicalization systems at scale
+- Migrated MongoDB → PostgreSQL (1000x latency improvement: >10min → <1s)
+- Integrated Qdrant for semantic retrieval
+- Built CI/CD pipelines and comprehensive test suites
+
+### 3. Flask REST API
+
+- Clean, minimal API demonstrating backend fundamentals
+- **Repo**: [restaurantly](https://github.com/GamerGbesh/restaurantly.git)
+
+## Tech Stack
+
+**Primary**: Python, PostgreSQL, Django, FastAPI
+**AI/ML**: RAG, Transformers, Qdrant, pgvector, Chroma
+**Infrastructure**: Docker, GitHub Actions, Git
+**Languages**: Python, SQL, TypeScript
+
+## Experience
+
+**AI Intern @ Remotown** (Sep 2025 - Present)
+
+- Production RAG & data canonicalization pipelines
+- Backend migration & performance optimization
+- Vector database integration for semantic search
+- CI/CD and testing infrastructure
+
+## Education
+
+**BSc Computer Engineering** | University of Ghana (2024 - Present)
+
+- First Class Academic Standing
+
+---
+
+## Development
+
+This portfolio uses React + Vite for frontend deployment, but the showcased work is entirely backend/AI focused.
+
+```bash
+npm install
+npm run dev
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contact
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Building production backend systems and AI pipelines. Open to backend engineering and ML infrastructure opportunities.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+**Note**: This is a backend engineer's portfolio. The React frontend is minimal and serves only to present backend/AI work.
