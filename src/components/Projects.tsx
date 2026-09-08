@@ -19,14 +19,7 @@ export default function Projects() {
       image: "/assets/projects/data_pipeline.png",
       description:
         "Designed and deployed production pipelines at Remotown for cleaning and normalizing large-scale job and company data. Integrated Qdrant for vector-based semantic retrieval. Migrated backend from MongoDB to PostgreSQL, reducing request latency from >10 minutes to <1 second. Implemented comprehensive testing and CI/CD with GitHub Actions.",
-      tech: [
-        "Python",
-        "PostgreSQL",
-        "Qdrant",
-        "Docker",
-        "GitHub Actions",
-        "RAG",
-      ],
+      tech: ["Python", "PostgreSQL", "Qdrant", "Docker", "GitHub Actions", "RAG"],
     },
     {
       title: "Flask REST API with Database Layer",
@@ -50,30 +43,27 @@ export default function Projects() {
 
   return (
     <Element name="projects">
-      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-4 md:px-8 py-16">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-4 md:px-8 py-20">
+        <div className="text-center mb-12">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-cyan-400/70 mb-3">Work</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-gray-400 text-base">
-            Production systems, AI pipelines, and backend infrastructure
-          </p>
+          <p className="text-white/45 text-sm mt-3">Production systems, AI pipelines, and backend infrastructure</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl">
-          {projects.map(
-            ({ title, category, link, image, description, tech }) => (
-              <ProjectCard
-                key={title}
-                title={title}
-                category={category}
-                link={link}
-                image={image}
-                description={description}
-                tech={tech}
-              />
-            )
-          )}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full max-w-6xl">
+          {projects.map(({ title, category, link, image, description, tech }) => (
+            <ProjectCard
+              key={title}
+              title={title}
+              category={category}
+              link={link}
+              image={image}
+              description={description}
+              tech={tech}
+            />
+          ))}
         </div>
       </div>
     </Element>

@@ -29,7 +29,7 @@ export default function Achievements() {
     },
     {
       title: "Zindi & Yango Hackathon",
-      category: "Hackathon Participation",
+      category: "Hackathon",
       link: "https://www.linkedin.com/posts/philemon-mensah-b7124030b_hackathonexperience-zindi-yango-activity-7277305555998638080-pLq8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7hEoUBrDKDMhdfEfM6gkkzwnD_R0N2x9s",
       image: "/assets/achievements/hackathon.jpg",
       description:
@@ -38,31 +38,28 @@ export default function Achievements() {
   ];
 
   return (
-    <Element name={"achievements"}>
-      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-4 md:px-8 py-16">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+    <Element name="achievements">
+      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-4 md:px-8 py-20">
+        <div className="text-center mb-12">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-cyan-400/70 mb-3">Milestones</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">
             Achievements
           </h2>
-          <p className="text-gray-400 text-base">
-            Professional milestones and accomplishments
-          </p>
+          <p className="text-white/45 text-sm mt-3">Professional milestones and accomplishments</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl">
-          {achievements.map(
-            ({ title, category, link, image, description, tech }) => (
-              <ProjectCard
-                key={title}
-                title={title}
-                category={category}
-                link={link}
-                image={image}
-                description={description}
-                tech={tech}
-              />
-            )
-          )}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full max-w-6xl">
+          {achievements.map(({ title, category, link, image, description, tech }) => (
+            <ProjectCard
+              key={title}
+              title={title}
+              category={category}
+              link={link}
+              image={image}
+              description={description}
+              tech={tech}
+            />
+          ))}
         </div>
       </div>
     </Element>

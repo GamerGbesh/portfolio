@@ -2,81 +2,94 @@ import { motion } from "motion/react";
 import { Element, Link } from "react-scroll";
 
 export default function About() {
+  const focuses = [
+    { label: "Backend Engineering", detail: "Python · Django · FastAPI · PostgreSQL" },
+    { label: "AI/ML Systems",       detail: "RAG · Transformers · Vector Databases" },
+    { label: "Data Infrastructure", detail: "Docker · CI/CD · ETL Pipelines" },
+  ];
+
   return (
     <Element name="about">
-      <div className="min-h-screen snap-start flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-12 py-16">
+      <div className="min-h-screen snap-start flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16 py-20">
+
+        {/* Photo */}
         <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          className="w-full md:w-5/12 max-w-sm"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full md:w-5/12 max-w-xs flex-shrink-0"
         >
-          <img
-            src="/assets/Me.jpg"
-            alt="Philemon"
-            className="rounded-2xl shadow-2xl border-2 border-gray-700/50 hover:border-blue-500/50 transition-all duration-500"
-          />
+          <div className="relative">
+            {/* glow behind photo */}
+            <div className="absolute inset-0 rounded-3xl blur-2xl scale-95 opacity-40"
+              style={{ background: "linear-gradient(135deg,#3b82f6,#8b5cf6)" }} />
+            <div className="relative p-[2px] rounded-3xl"
+              style={{ background: "linear-gradient(135deg,rgba(99,179,237,0.4),rgba(183,148,244,0.4))" }}>
+              <img
+                src="/assets/Me.jpg"
+                alt="Philemon Mensah"
+                className="w-full rounded-[22px] object-cover shadow-2xl"
+              />
+            </div>
+          </div>
         </motion.div>
-        <div className="text-white space-y-4 w-full md:w-7/12 max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-            About Me
-          </h2>
 
-          <p className="text-lg">
-            I'm{" "}
-            <span className="font-semibold text-blue-300">Philemon Mensah</span>
-            , a sophomore Computer Engineering student at the University of
-            Ghana (First Class Academic Standing). I specialize in{" "}
-            <span className="font-medium text-purple-300">
-              backend engineering
-            </span>{" "}
-            and{" "}
-            <span className="font-medium text-purple-300">
-              applied AI systems
-            </span>
-            .
+        {/* Text */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          className="text-white space-y-6 w-full md:w-7/12 max-w-xl"
+        >
+          <div>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-cyan-400/70 mb-2">About Me</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">
+              Philemon Mensah
+            </h2>
+          </div>
+
+          <p className="text-white/65 leading-relaxed">
+            Sophomore Computer Engineering student at the{" "}
+            <span className="text-white/90 font-medium">University of Ghana</span>{" "}
+            (First Class Standing), specialising in{" "}
+            <span className="text-blue-300 font-medium">backend engineering</span> and{" "}
+            <span className="text-violet-300 font-medium">applied AI systems</span>.
           </p>
 
-          <p className="text-lg">
-            Currently working as an AI Intern at{" "}
-            <span className="font-semibold">Remotown</span>, where I've designed
-            and deployed production data pipelines for job and company
-            canonicalization. I've built RAG systems with vector databases
-            (Qdrant, pgvector), migrated backends from MongoDB to PostgreSQL
-            (achieving 1000x latency improvements), and implemented
-            comprehensive CI/CD workflows.
+          <p className="text-white/65 leading-relaxed">
+            Currently an <span className="text-white/90 font-medium">AI Intern at Remotown</span> — designed
+            and deployed production data pipelines for job and company canonicalization, built RAG systems
+            with vector databases (Qdrant, pgvector), migrated backends from MongoDB to PostgreSQL
+            achieving <span className="text-cyan-300 font-semibold">1000× latency improvements</span>, and
+            implemented CI/CD workflows end to end.
           </p>
 
-          <p className="text-lg">
-            My work focuses on solving real-world data quality problems at scale
-            — from entity resolution using transformer models to building
-            high-performance APIs that handle large-scale semantic retrieval.
-          </p>
+          {/* Focus areas */}
+          <div className="space-y-2.5 pt-1">
+            {focuses.map(({ label, detail }) => (
+              <div key={label}
+                className="flex items-start gap-3 p-3.5 rounded-xl border"
+                style={{ background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}
+              >
+                <span className="mt-0.5 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-blue-400 to-violet-400 flex-shrink-0" style={{ marginTop: "0.4rem" }} />
+                <div>
+                  <p className="text-sm font-semibold text-white/90">{label}</p>
+                  <p className="text-xs text-white/40 mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-          <p className="text-lg font-semibold">Technical Focus:</p>
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Backend Engineering (Python, Django, FastAPI, PostgreSQL)</li>
-            <li>AI/ML Systems (RAG, Transformers, Vector Databases)</li>
-            <li>Data Pipelines & Infrastructure (Docker, CI/CD, Testing)</li>
-          </ol>
-
-          <button
-            className={
-              "mt-4 px-6 py-2 bg-blue-600 " +
-              "hover:bg-blue-700 text-white rounded-md shadow-md transition-all"
-            }
-          >
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-30}
-              className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
+          <Link to="contact" smooth duration={500} offset={-30}>
+            <button
+              className="mt-2 inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-bold text-white transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-[0.97]"
+              style={{ background: "linear-gradient(135deg,#3b82f6,#8b5cf6)", boxShadow: "0 4px 24px rgba(99,102,241,0.3)" }}
             >
-              Contact Me
-            </Link>
-          </button>
-        </div>
+              Get In Touch →
+            </button>
+          </Link>
+        </motion.div>
+
       </div>
     </Element>
   );
