@@ -5,7 +5,7 @@ export default function Languages() {
       alt: "Python",
     },
     { src: "/assets/languages/sql.png", alt: "SQL/PostgreSQL" },
-    { src: "/assets/languages/ts.png", alt: "TypeScript" },
+    { src: "/assets/languages/rust.png", alt: "Rust" },
     { src: "/assets/languages/docker.png", alt: "Docker" },
     { src: "/assets/languages/git.png", alt: "Git" },
   ];

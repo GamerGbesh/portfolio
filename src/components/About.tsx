@@ -8,6 +8,7 @@ export default function About() {
         <motion.div
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
           className="w-full md:w-5/12 max-w-sm"
         >
           <img

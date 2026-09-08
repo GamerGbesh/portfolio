@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   FiLinkedin,
   FiGithub,
@@ -17,7 +17,7 @@ export default function Contact() {
       <div className="min-h-screen snap-start flex flex-col items-center justify-center text-white px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="w-full max-w-xl bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-700/50 p-8 md:p-10 flex flex-col items-center hover:border-blue-500/50 transition-all duration-500"
         >
